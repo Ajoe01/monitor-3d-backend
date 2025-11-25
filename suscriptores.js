@@ -45,9 +45,9 @@ io.on('connection', (socket) => {
     console.log('Cliente desconectado:', socket.id);
   });
 });
-
 // Iniciar servidor
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 server.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
